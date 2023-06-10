@@ -12,17 +12,17 @@ const NewProduct = () => {
     let { addProduct } = useContext(ProductContext);
     let navigate = useNavigate();
 
-    function handleChange(event) {
+    function handleChange(event: { target: { name: any; value: any; }; }) {
         setNewProduct((prevValue) => {
             return { ...prevValue, [event.target.name]: event.target.value }
         });
     }
 
-    function handleSubmit(event) {
+    function handleSubmit(event: { preventDefault: () => void; }) {
         event.preventDefault();
         addProduct(newProduct).then(() => {
             navigate('/product');
-        }).catch(error => {
+        }).catch((error: any) => {
             console.log(error);
             navigate('/signin');
         });

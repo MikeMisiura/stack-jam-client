@@ -15,19 +15,19 @@ function App() {
                 <div>
                     <BrowserRouter>
                         <nav>
-                            <Link to="/signup">Sign Up</Link>
+                            <Link to="/sign-up">Sign Up</Link>
                             <span> | </span>
-                            <Link to="/signin">Sign In</Link>
+                            <Link to="/sign-in">Sign In</Link>
                             <span> | </span>
                             <Link to="/product">Product List</Link>
                             <hr></hr>
                         </nav>
                         <Routes>
-                            <Route exact path="/" element={<SignIn />} />
-                            <Route path="/signin" element={<SignIn />} />
-                            <Route path="/signup" element={<SignUp />} />
+                            <Route path="/sign-in" element={<SignIn />} />
+                            <Route path="/sign-up" element={<SignUp />} />
                             <Route path="/product/new" element={<NewProduct />} />
                             <Route path="/product" element={<ProductList />} />
+                            <Route path="/" element={<SignIn />} />
                         </Routes>
                     </BrowserRouter>
                 </div>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ProductContext from "./ProductContext";
 import React from 'react';
 
-export const ProductProvider = (props) => {
+export const ProductProvider = (props: { children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
 
     const [ product, setProduct ] = useState([]);
     const baseUrl = "http://localhost:3000/api/product/";
@@ -19,11 +19,11 @@ export const ProductProvider = (props) => {
         return axios.get(baseUrl).then(response => setProduct(response.data));
     }
 
-    function getProduct(id) {
+    function getProduct(id: any) {
         
     }
 
-    function addProduct(product) {        
+    function addProduct(product: any) {        
         let myHeaders = {
             Authorization: `Bearer ${localStorage.getItem('myProductToken')}`
         };
@@ -36,11 +36,11 @@ export const ProductProvider = (props) => {
         );
     }
 
-    function editProduct(product) {
+    function editProduct(product: any) {
 
     }
 
-    function deleteProduct(id) {
+    function deleteProduct(id: any) {
 
     }
 

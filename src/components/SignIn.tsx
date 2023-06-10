@@ -9,11 +9,11 @@ const SignIn = () => {
     let { signInUser } = useContext(UserContext);
     let navigate = useNavigate();
 
-    function handleSubmit(event) {
+    function handleSubmit(event: { preventDefault: () => void; }) {
         event.preventDefault();
         signInUser(username, password).then(() => {
             navigate('/product');
-        }).catch(error => {
+        }).catch((error: any) => {
             console.log(error);
             window.alert('Failed login');
         });

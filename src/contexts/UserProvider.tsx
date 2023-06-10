@@ -6,7 +6,7 @@ export function UserProvider({ children }: any) {
 
     const baseUrl = "http://localhost:3000/api/users/";
 
-    function createUser(username, password) {       
+    function createUser(username: any, password: any) {       
         let user = { username, password };
         
         return axios.post(baseUrl, user)
@@ -16,7 +16,7 @@ export function UserProvider({ children }: any) {
         );
     }
 
-    function signInUser(username, password) {
+    function signInUser(username: any, password: any) {
         let user = { username, password };
 
         return axios.post(`${baseUrl}/login`, user)

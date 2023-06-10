@@ -9,11 +9,11 @@ const SignUp = () => {
     let { createUser } = useContext(UserContext);
     let navigate = useNavigate();
 
-    function handleSubmit(event) {
+    function handleSubmit(event: { preventDefault: () => void; }) {
         event.preventDefault();
         createUser(username, password).then(() => {
             navigate('/signin');
-        }).catch(error => {
+        }).catch((error: any) => {
             console.log(error);
             window.alert('Failed registration: error creating user');
         });
