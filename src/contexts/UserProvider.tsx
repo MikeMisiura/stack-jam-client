@@ -1,14 +1,13 @@
 import axios from "axios";
 import UserContext from "./UserContext";
-import React from 'react';
+import { IUser } from "../@types/user";
 
 export function UserProvider({ children }: any) {
 
     const baseUrl = "http://localhost:3000/api/users/";
 
-    function createUser(username: any, password: any) {       
-        let user = { username, password };
-        
+    function createUser(user: IUser) {
+
         return axios.post(baseUrl, user)
             .then(response => {
                 return new Promise(resolve => resolve(response.data));
@@ -16,10 +15,13 @@ export function UserProvider({ children }: any) {
         );
     }
 
-    function signInUser(username: any, password: any) {
-        let user = { username, password };
+    function signInUser(user: IUser) {
+        const newSignInUser = {
+            email: user.email,
+            password: user.password
+        }
 
-        return axios.post(`${baseUrl}/login`, user)
+        return axios.post(`${baseUrl}login`, newSignInUser)
             .then(response => {
                 localStorage.setItem('myProductToken', response.data.token)
                 return new Promise(resolve => resolve(response.data));

@@ -1,9 +1,10 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserContext from '../contexts/UserContext';
+import { IUser } from '../@types/user';
 
 const SignIn = () => {
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     let { signInUser } = useContext(UserContext);
@@ -11,7 +12,10 @@ const SignIn = () => {
 
     function handleSubmit(event: { preventDefault: () => void; }) {
         event.preventDefault();
-        signInUser(username, password).then(() => {
+
+        const thisUser: IUser = { email, password }
+
+        signInUser(thisUser).then(() => {
             navigate('/product');
         }).catch((error: any) => {
             console.log(error);
@@ -22,8 +26,8 @@ const SignIn = () => {
     return (
         <form onSubmit={handleSubmit}>
             <h1>LOGIN</h1>
-            <span>Username  </span>
-            <input placeholder="Enter username" type="text" name="username" onChange={e => setUsername(e.target.value)} />
+            <span>Email  </span>
+            <input placeholder="Enter email" type="text" name="email" onChange={e => setEmail(e.target.value)} />
             <br></br><br></br>
             <span>Password  </span>
             <input placeholder="Enter password" type="password" name="password" onChange={e => setPassword(e.target.value)} />
