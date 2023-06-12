@@ -1,10 +1,14 @@
 import axios from "axios";
 import UserContext from "./UserContext";
 import { IUser } from "../@types/user";
+import { useState, useEffect } from "react";
+
 
 export function UserProvider({ children }: any) {
 
     const baseUrl = "http://localhost:3000/api/users/";
+
+    const [admin, setAdmin] = useState(localStorage.getItem('admin'));
 
     function createUser(user: IUser) {
 
@@ -12,7 +16,7 @@ export function UserProvider({ children }: any) {
             .then(response => {
                 return new Promise(resolve => resolve(response.data));
             }
-        );
+            );
     }
 
     function signInUser(user: IUser) {
@@ -23,18 +27,22 @@ export function UserProvider({ children }: any) {
 
         return axios.post(`${baseUrl}login`, newSignInUser)
             .then(response => {
-                localStorage.setItem('myProductToken', response.data.token)
+                console.log(response.data)
+                localStorage.setItem('myAuthToken', response.data.token)
+                localStorage.setItem('admin', response.data.admin)
+                setAdmin(response.data.admin)
                 return new Promise(resolve => resolve(response.data));
             }
-        );
+            );
     }
 
     return (
         <UserContext.Provider value={{
+            admin,
             createUser,
             signInUser
         }}>
-            { children }
+            {children}
         </UserContext.Provider>
     )
 }

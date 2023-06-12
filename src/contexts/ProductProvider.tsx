@@ -6,7 +6,7 @@ import React from 'react';
 export const ProductProvider = (props: { children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
 
     const [ product, setProduct ] = useState([]);
-    const baseUrl = "http://localhost:3000/api/product/";
+    const baseUrl = "http://localhost:3000/api/products/";
 
     useEffect(() => {
         async function fetchData() {
@@ -25,7 +25,7 @@ export const ProductProvider = (props: { children: string | number | boolean | R
 
     function addProduct(product: any) {        
         let myHeaders = {
-            Authorization: `Bearer ${localStorage.getItem('myProductToken')}`
+            Authorization: `Bearer ${localStorage.getItem('myAuthToken')}`
         };
 
         return axios.post(baseUrl, product, { headers: myHeaders })

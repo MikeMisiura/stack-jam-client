@@ -1,11 +1,15 @@
-import React from 'react';
-import { Route, BrowserRouter, Routes, Link } from 'react-router-dom'
-import SignIn from './components/SignIn'
-import SignUp from './components/SignUp'
-import ProductList from './components/ProductList'
-import NewProduct from './components/NewProduct'
+import { Route, BrowserRouter, Routes, Link, Navigate } from 'react-router-dom'
+import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
+import Home from './pages/Home'
+import NewProduct from './pages/NewProduct'
 import { ProductProvider } from './contexts/ProductProvider';
 import { UserProvider } from './contexts/UserProvider';
+import MyNavbar from './components/MyNavbar'
+import Admin from './components/Admin'
+import AdminNavbar from './components/AdminNavbar'
+// import styles from './styling/app.modules.css'; 
+
 
 function App() {
     return (
@@ -14,21 +18,28 @@ function App() {
 
                 <div>
                     <BrowserRouter>
-                        <nav>
-                            <Link to="/sign-up">Sign Up</Link>
-                            <span> | </span>
-                            <Link to="/sign-in">Sign In</Link>
-                            <span> | </span>
-                            <Link to="/product">Product List</Link>
-                            <hr></hr>
-                        </nav>
-                        <Routes>
-                            <Route path="/sign-in" element={<SignIn />} />
-                            <Route path="/sign-up" element={<SignUp />} />
-                            <Route path="/product/new" element={<NewProduct />} />
-                            <Route path="/product" element={<ProductList />} />
-                            <Route path="/" element={<SignIn />} />
-                        </Routes>
+                        <MyNavbar />
+                        <div style={{ padding: 70 }}>
+                            <Routes>
+
+                                {/* <Route path="/" element={<Layout />}>
+                                    <Route index element={<Home />} />
+                                    <Route path="blogs" element={<Blogs />} />
+                                    <Route path="contact" element={<Contact />} />
+                                    <Route path="*" element={<NoPage />} />
+                                </Route> */}
+
+                                {/* <Route path='/' */}
+                                <Route path="/sign-in" element={<SignIn />} />
+                                <Route path="/sign-up" element={<SignUp />} />
+                                <Route path="/product" element={<Home />} />
+                                    <Route path="/admin/add-product" element={<NewProduct />} />
+                                <Route path="/admin" element={<AdminNavbar />} >
+
+                                </Route>
+                                <Route path="/" element={<Navigate to="/product" />} />
+                            </Routes>
+                        </div>
                     </BrowserRouter>
                 </div>
             </ProductProvider>
