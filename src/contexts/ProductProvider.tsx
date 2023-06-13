@@ -2,10 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import ProductContext from "./ProductContext";
 import React from 'react';
+import { INewProduct, IProduct } from "../@types/product";
 
 export const ProductProvider = (props: { children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
 
-    const [ product, setProduct ] = useState([]);
+    const [product, setProduct] = useState([]);
     const baseUrl = "http://localhost:3000/api/products/";
 
     useEffect(() => {
@@ -20,10 +21,10 @@ export const ProductProvider = (props: { children: string | number | boolean | R
     }
 
     function getProduct(id: any) {
-        
+
     }
 
-    function addProduct(product: any) {        
+    function addProduct(product: IProduct) {
         let myHeaders = {
             Authorization: `Bearer ${localStorage.getItem('myAuthToken')}`
         };
@@ -33,7 +34,23 @@ export const ProductProvider = (props: { children: string | number | boolean | R
                 getAllProduct();
                 return new Promise(resolve => resolve(response.data));
             }
-        );
+            );
+    }
+
+    function addProducts(product: INewProduct) {
+        for (let colorIndex = 0; colorIndex < product.color.length; colorIndex++) {
+            const color = product.color[colorIndex];
+
+            let newProduct: IProduct = {
+                productName: product.productName,
+                color,
+                description: product.description,
+                price: product.price,
+                groupCode: product.groupCode
+            }
+
+            addProduct(newProduct)
+        }
     }
 
     function editProduct(product: any) {
@@ -48,11 +65,11 @@ export const ProductProvider = (props: { children: string | number | boolean | R
         <ProductContext.Provider value={{
             product,
             getProduct,
-            addProduct,
+            addProducts,
             editProduct,
             deleteProduct
         }}>
-            { props.children }
+            {props.children}
         </ProductContext.Provider>
     )
 };

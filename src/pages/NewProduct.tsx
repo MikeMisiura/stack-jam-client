@@ -2,16 +2,17 @@ import { useContext, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import ProductContext from '../contexts/ProductContext';
 import UserContext from '../contexts/UserContext';
-import { IProduct } from '../@types/product';
+import { INewProduct, IProduct } from '../@types/product';
 
 export default function NewProduct() {
     // hooks
     const [productName, setProductName] = useState<string>("");
     const [description, setDescription] = useState<string>("");
     const [color, setColor] = useState<string>("");
+    const [groupCode, setGroupCode] = useState<string>("");
     const [price, setPrice] = useState<number>(0);
 
-    let { addProduct } = useContext(ProductContext);
+    let { addProducts } = useContext(ProductContext);
 
     let navigate = useNavigate();
 
@@ -23,16 +24,17 @@ export default function NewProduct() {
 
         const colorArray: string[] = color.split(", ")
 
-        const newProduct: IProduct = {
+        const newProduct: INewProduct = {
             productName,
             color: colorArray,
             description,
+            groupCode,
             price
         }
 
         console.log(newProduct)
 
-        addProduct(newProduct).then(() => {
+        addProducts(newProduct).then(() => {
             navigate('/product');
         }).catch((error: any) => {
             console.log(error);
@@ -65,11 +67,20 @@ export default function NewProduct() {
             <br></br><br></br>
             <span>Colors (separate by comma) </span>
             <input 
-                placeholder="Enter description" 
+                placeholder="Enter colors" 
                 type="text" 
                 name="color" 
                 value={color} 
                 onChange={e => setColor(e.target.value)} 
+            />
+            <br></br><br></br>
+            <span>Group Code </span>
+            <input 
+                placeholder="Enter group code" 
+                type="text" 
+                name="groupCode" 
+                value={groupCode} 
+                onChange={e => setGroupCode(e.target.value)} 
             />
             <br></br><br></br>
             <span>Price  </span>

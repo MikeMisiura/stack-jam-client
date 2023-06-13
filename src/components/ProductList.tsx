@@ -1,9 +1,7 @@
-import React from 'react';
 import ProductContext from '../contexts/ProductContext';
-import { Link } from 'react-router-dom';
-import UserContext from '../contexts/UserContext';
-import { useContext } from 'react';
 import { IProduct } from '../@types/product';
+import { Container } from 'react-bootstrap';
+import ProductCard from './ProductCard';
 
 
 const ProductList = () => {
@@ -12,18 +10,11 @@ const ProductList = () => {
         <ProductContext.Consumer>
         {
             ({ product }) => {
-                return <div>
-                    <div>
-                        {product.map((p: IProduct) => {
-                            return (
-                                <div key={p.id}>
-                                    <h2>{p.productName} | ${p.price}</h2>
-                                    <p>{p.description}</p>
-                                </div>
-                            )
+                return <Container>
+                        {product.map((product: IProduct) => {
+                            return <ProductCard product={product} />
                         })}
-                    </div>
-                </div>
+                </Container>
             }
         }
         </ProductContext.Consumer>

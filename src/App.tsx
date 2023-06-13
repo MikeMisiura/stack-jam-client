@@ -8,6 +8,8 @@ import { UserProvider } from './contexts/UserProvider';
 import MyNavbar from './components/MyNavbar'
 import Admin from './components/Admin'
 import AdminNavbar from './components/AdminNavbar'
+import StackJamColors from './theme/stackJamColors'
+import AboutUs from './pages/About'
 // import styles from './styling/app.modules.css'; 
 
 
@@ -16,7 +18,10 @@ function App() {
         <UserProvider>
             <ProductProvider>
 
-                <div>
+                <div style={{
+                    backgroundColor: StackJamColors.red, 
+                    color: StackJamColors.white
+                }}>
                     <BrowserRouter>
                         <MyNavbar />
                         <div style={{ padding: 70 }}>
@@ -30,6 +35,7 @@ function App() {
                                 </Route> */}
 
                                 {/* <Route path='/' */}
+                                <Route path="/about-us" element={<AboutUs />} />
                                 <Route path="/sign-in" element={<SignIn />} />
                                 <Route path="/sign-up" element={<SignUp />} />
                                 <Route path="/product" element={<Home />} />
