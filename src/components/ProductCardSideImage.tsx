@@ -3,12 +3,12 @@ import { IProduct } from '../@types/product';
 
 interface ProductProps { product: IProduct }
 
-const ProductCard: React.FC<ProductProps> = ({ product }): JSX.Element => {
+const ProductCardSideImage: React.FC<ProductProps> = ({ product }): JSX.Element => {
 
     const imgSrc: string = `/images/products/${product.groupCode}${product.color}.jpg`
 
     return (
-        <Row className='p-5' key={product.id}>
+        <Row className='p-3' key={product._id}>
             <Col 
                 xs={12} 
                 sm={8} 
@@ -26,10 +26,10 @@ const ProductCard: React.FC<ProductProps> = ({ product }): JSX.Element => {
             <h2>{product.productName} | ${product.price}</h2>
             <p>{product.description}</p>
             <p>{product.color}</p>
-            <p>Id: {product.id}</p>
+            <p>Id: {product._id}</p>
             </Col>
         </Row>
     )
 }
 
-export default ProductCard
+export default ProductCardSideImage

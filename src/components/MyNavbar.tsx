@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import UserContext from '../contexts/UserContext';
 import { useContext } from 'react';
 import StackJamColors from '../theme/stackJamColors';
+import { Image } from 'react-bootstrap';
 
 export default function MyNavbar() {
 
@@ -22,9 +23,9 @@ export default function MyNavbar() {
     >
       <Container>
         <Navbar.Brand href="/">
-          <img
+          <Image
             alt="logo"
-            src='/logo.png'
+            src='/images/logos/logo.png'
             width="75"
             height="75"
             className="d-inline-block align-top"

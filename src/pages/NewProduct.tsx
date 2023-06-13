@@ -42,7 +42,7 @@ export default function NewProduct() {
         });
     }
 
-    // TODO: make form more attractive with grid and separate component
+    // TODO: make form more attractive with grid and separate component for inputs
 
     return (
         <form onSubmit={handleSubmit}>
