@@ -37,6 +37,7 @@ export default function MyNavbar() {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about-us">Our Story</Nav.Link>
+            <Nav.Link href="/contact-us">Contact Us</Nav.Link>
             <Nav.Link href="/sign-in">Sign In</Nav.Link>
             <Nav.Link href="/sign-up">Sign Up</Nav.Link>
             {admin && <Nav.Link href="/admin">Admin</Nav.Link>}

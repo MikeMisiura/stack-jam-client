@@ -14,11 +14,3 @@ export interface INewProduct {
   price: number;
   groupCode: string
 }
-
-// TODO: use user context type instead of any
-
-// export type UserContextType = {
-//   users: IUser[];
-//   createUser: (email: string, password: string) => void;
-//   signInUser: (email: string, password: string) => void;
-// };

@@ -9,9 +9,14 @@ export function UserProvider({ children }: any) {
     const baseUrl = "http://localhost:3000/api/users/";
 
     const [admin, setAdmin] = useState(localStorage.getItem('admin'));
+    const [loggedInUser, setLoggedInUser] = useState<IUser | null>(null);
+
+    function getUserInfo() {
+        axios.get(`${baseUrl}info`).then(response => setLoggedInUser(response.data));
+        return loggedInUser
+    }
 
     function createUser(user: IUser) {
-
         return axios.post(baseUrl, user)
             .then(response => {
                 return new Promise(resolve => resolve(response.data));
@@ -39,6 +44,8 @@ export function UserProvider({ children }: any) {
     return (
         <UserContext.Provider value={{
             admin,
+            loggedInUser,
+            getUserInfo,
             createUser,
             signInUser
         }}>

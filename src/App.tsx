@@ -5,11 +5,12 @@ import Home from './pages/Home'
 import NewProduct from './pages/NewProduct'
 import { ProductProvider } from './contexts/ProductProvider';
 import { UserProvider } from './contexts/UserProvider';
+import { MessageProvider } from './contexts/MessageProvider';
 import MyNavbar from './components/MyNavbar'
-import Admin from './components/Admin'
 import AdminNavbar from './components/AdminNavbar'
 import StackJamColors from './theme/stackJamColors'
 import AboutUs from './pages/About'
+import ContactPage from './pages/ContactPage'
 // import styles from './styling/app.modules.css'; 
 
 
@@ -17,6 +18,7 @@ function App() {
     return (
         <UserProvider>
             <ProductProvider>
+            <MessageProvider>
 
                 <div style={{
                     backgroundColor: StackJamColors.red, 
@@ -27,6 +29,7 @@ function App() {
                         <div style={{ padding: 70 }}>
                             <Routes>
 
+                                {/* TODO: restructure routes */}
                                 {/* <Route path="/" element={<Layout />}>
                                     <Route index element={<Home />} />
                                     <Route path="blogs" element={<Blogs />} />
@@ -36,6 +39,7 @@ function App() {
 
                                 {/* <Route path='/' */}
                                 <Route path="/about-us" element={<AboutUs />} />
+                                <Route path="/contact-us" element={<ContactPage />} />
                                 <Route path="/sign-in" element={<SignIn />} />
                                 <Route path="/sign-up" element={<SignUp />} />
                                 <Route path="/product" element={<Home />} />
@@ -48,7 +52,8 @@ function App() {
                         </div>
                     </BrowserRouter>
                 </div>
-            </ProductProvider>
+                </MessageProvider>
+                </ProductProvider>
         </UserProvider>
     );
 }
