@@ -7,7 +7,7 @@ import { ProductProvider } from './contexts/ProductProvider';
 import { UserProvider } from './contexts/UserProvider';
 import { MessageProvider } from './contexts/MessageProvider';
 import MyNavbar from './components/MyNavbar'
-import AdminNavbar from './components/AdminNavbar'
+// import AdminNavbar from './components/AdminNavbar'
 import StackJamColors from './theme/stackJamColors'
 import AboutUs from './pages/About'
 import ContactPage from './pages/ContactPage'
@@ -44,9 +44,6 @@ function App() {
                                 <Route path="/sign-up" element={<SignUp />} />
                                 <Route path="/product" element={<Home />} />
                                     <Route path="/admin/add-product" element={<NewProduct />} />
-                                <Route path="/admin" element={<AdminNavbar />} >
-
-                                </Route>
                                 <Route path="/" element={<Navigate to="/product" />} />
                             </Routes>
                         </div>
