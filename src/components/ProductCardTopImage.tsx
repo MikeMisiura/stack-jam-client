@@ -1,10 +1,14 @@
-import { Col, Row, Image, Card } from 'react-bootstrap';
+import { Col, Row, Image, Card, Button } from 'react-bootstrap';
 import { IProduct } from '../@types/product';
 import StackJamColors from '../theme/stackJamColors';
+import { useContext } from 'react';
+import CartContext from '../contexts/CartContext';
 
 interface ProductProps { product: IProduct }
 
 const ProductCardTopImage: React.FC<ProductProps> = ({ product }): JSX.Element => {
+
+    let { addToCart, cart, removeFromCart } = useContext(CartContext);
 
     const imgSrc: string = `/images/products/${product.groupCode}${product.color}.jpg`
 
@@ -27,7 +31,10 @@ const ProductCardTopImage: React.FC<ProductProps> = ({ product }): JSX.Element =
                     <Card.Title>{product.productName} | ${product.price}</Card.Title>
                     <Card.Text>{product.description}</Card.Text>
                     <Card.Text>Color: {product.color}</Card.Text>
-                    <Card.Text>Id: {product._id}</Card.Text>
+                    <Button 
+                        onClick={() => {addToCart(product)}} 
+                        variant="primary"
+                    >Add to Cart</Button>
                 </Card.Body>
             </Card>
         </Col>

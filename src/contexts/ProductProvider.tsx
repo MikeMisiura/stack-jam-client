@@ -33,8 +33,7 @@ export const ProductProvider = (props: { children: string | number | boolean | R
             .then(response => {
                 getAllProduct();
                 return new Promise(resolve => resolve(response.data));
-            }
-            );
+            });
     }
 
     function addProducts(product: INewProduct) {

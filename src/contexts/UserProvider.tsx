@@ -32,7 +32,6 @@ export function UserProvider({ children }: any) {
 
         return axios.post(`${baseUrl}login`, newSignInUser)
             .then(response => {
-                console.log(response.data)
                 localStorage.setItem('myAuthToken', response.data.token)
                 localStorage.setItem('admin', response.data.admin)
                 setAdmin(response.data.admin)

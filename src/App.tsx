@@ -11,6 +11,8 @@ import MyNavbar from './components/MyNavbar'
 import StackJamColors from './theme/stackJamColors'
 import AboutUs from './pages/About'
 import ContactPage from './pages/ContactPage'
+import { CartProvider } from './contexts/CartProvider'
+import ShoppingCart from './pages/ShoppingCart'
 // import styles from './styling/app.modules.css'; 
 
 
@@ -18,39 +20,42 @@ function App() {
     return (
         <UserProvider>
             <ProductProvider>
-            <MessageProvider>
+                <MessageProvider>
+                    <CartProvider>
 
-                <div style={{
-                    backgroundColor: StackJamColors.red, 
-                    color: StackJamColors.white
-                }}>
-                    <BrowserRouter>
-                        <MyNavbar />
-                        <div style={{ padding: 70 }}>
-                            <Routes>
+                        <div style={{
+                            backgroundColor: StackJamColors.red,
+                            color: StackJamColors.white
+                        }}>
+                            <BrowserRouter>
+                                <MyNavbar />
+                                <div style={{ padding: 70 }}>
+                                    <Routes>
 
-                                {/* TODO: restructure routes */}
-                                {/* <Route path="/" element={<Layout />}>
+                                        {/* TODO: restructure routes */}
+                                        {/* <Route path="/" element={<Layout />}>
                                     <Route index element={<Home />} />
                                     <Route path="blogs" element={<Blogs />} />
                                     <Route path="contact" element={<Contact />} />
                                     <Route path="*" element={<NoPage />} />
                                 </Route> */}
 
-                                {/* <Route path='/' */}
-                                <Route path="/about-us" element={<AboutUs />} />
-                                <Route path="/contact-us" element={<ContactPage />} />
-                                <Route path="/sign-in" element={<SignIn />} />
-                                <Route path="/sign-up" element={<SignUp />} />
-                                <Route path="/product" element={<Home />} />
-                                    <Route path="/admin/add-product" element={<NewProduct />} />
-                                <Route path="/" element={<Navigate to="/product" />} />
-                            </Routes>
+                                        {/* <Route path='/' */}
+                                        <Route path="/about-us" element={<AboutUs />} />
+                                        <Route path="/cart" element={<ShoppingCart />} />
+                                        <Route path="/contact-us" element={<ContactPage />} />
+                                        <Route path="/sign-in" element={<SignIn />} />
+                                        <Route path="/sign-up" element={<SignUp />} />
+                                        <Route path="/product" element={<Home />} />
+                                        <Route path="/admin/add-product" element={<NewProduct />} />
+                                        <Route path="/" element={<Navigate to="/product" />} />
+                                    </Routes>
+                                </div>
+                            </BrowserRouter>
                         </div>
-                    </BrowserRouter>
-                </div>
+                    </CartProvider>
                 </MessageProvider>
-                </ProductProvider>
+            </ProductProvider>
         </UserProvider>
     );
 }

@@ -38,6 +38,7 @@ export default function MyNavbar() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about-us">Our Story</Nav.Link>
             <Nav.Link href="/contact-us">Contact Us</Nav.Link>
+            <Nav.Link href="/cart">Cart</Nav.Link>
             <Nav.Link href="/sign-in">Sign In</Nav.Link>
             <Nav.Link href="/sign-up">Sign Up</Nav.Link>
             {admin && <NavDropdown title="Admin" id="admin-dropdown">
