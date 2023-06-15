@@ -8,7 +8,7 @@ interface ProductProps { product: ICartProduct }
 const ProductCardShoppingCart: React.FC<ProductProps> = ({ product }): JSX.Element => {
     let { incrementQuantity, decrementQuantity, removeFromCart } = useContext(CartContext);
 
-    const imgSrc: string = `/images/products/${product.groupCode}${product.color}.jpg`
+    const imgSrc: string = `/images/products/${product.groupCode}_${product.color.replace(" ", "-")}.jpg`
 
     return (
         <Row className='p-3' key={product._id}>

@@ -10,7 +10,7 @@ const ProductCardTopImage: React.FC<ProductProps> = ({ product }): JSX.Element =
 
     let { addToCart, cart, removeFromCart } = useContext(CartContext);
 
-    const imgSrc: string = `/images/products/${product.groupCode}${product.color}.jpg`
+    const imgSrc: string = `/images/products/${product.groupCode}_${product.color.replace(" ", "-")}.jpg`
 
     return (
         <Col
