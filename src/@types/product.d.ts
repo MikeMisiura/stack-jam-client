@@ -1,4 +1,5 @@
 export interface IProduct{
+  id?: number;
   _id?: string;
   productName: string;
   color: string;

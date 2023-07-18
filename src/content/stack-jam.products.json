@@ -1,0 +1,204 @@
+[{
+  "_id": {
+    "$oid": "648b55d2ea725ade672e5b38"
+  },
+  "productName": "Flyer",
+  "color": "blue",
+  "description": "This is a flying toy made from wood",
+  "price": 18,
+  "groupCode": "flyer",
+  "createdAt": {
+    "$date": "2023-06-15T18:17:54.033Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-15T18:17:54.033Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b55d2ea725ade672e5b3a"
+  },
+  "productName": "Flyer",
+  "color": "fluorescent pink",
+  "description": "This is a flying toy made from wood",
+  "price": 18,
+  "groupCode": "flyer",
+  "createdAt": {
+    "$date": "2023-06-15T18:17:54.035Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-15T18:25:58.775Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b55d2ea725ade672e5b3c"
+  },
+  "productName": "Flyer",
+  "color": "fluorescent orange",
+  "description": "This is a flying toy made from wood",
+  "price": 18,
+  "groupCode": "flyer",
+  "createdAt": {
+    "$date": "2023-06-15T18:17:54.037Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-15T18:26:48.714Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b55d2ea725ade672e5b3e"
+  },
+  "productName": "Flyer",
+  "color": "green",
+  "description": "This is a flying toy made from wood",
+  "price": 18,
+  "groupCode": "flyer",
+  "createdAt": {
+    "$date": "2023-06-15T18:17:54.040Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-15T18:17:54.040Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b55d2ea725ade672e5b40"
+  },
+  "productName": "Flyer",
+  "color": "dark natural",
+  "description": "This is a flying toy made from wood",
+  "price": 18,
+  "groupCode": "flyer",
+  "createdAt": {
+    "$date": "2023-06-15T18:17:54.043Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-15T18:17:54.043Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b55d2ea725ade672e5b42"
+  },
+  "productName": "Flyer",
+  "color": "light natural",
+  "description": "This is a flying toy made from wood",
+  "price": 18,
+  "groupCode": "flyer",
+  "createdAt": {
+    "$date": "2023-06-15T18:17:54.045Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-15T18:17:54.045Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b55d2ea725ade672e5b4a"
+  },
+  "productName": "Flyer",
+  "color": "orange",
+  "description": "This is a flying toy made from wood",
+  "price": 18,
+  "groupCode": "flyer",
+  "createdAt": {
+    "$date": "2023-06-15T18:17:54.059Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-15T18:17:54.059Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b55d2ea725ade672e5b4c"
+  },
+  "productName": "Flyer",
+  "color": "fluorescent green",
+  "description": "This is a flying toy made from wood",
+  "price": 18,
+  "groupCode": "flyer",
+  "createdAt": {
+    "$date": "2023-06-15T18:17:54.062Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-15T18:27:35.863Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b55d2ea725ade672e5b4e"
+  },
+  "productName": "Flyer",
+  "color": "purple",
+  "description": "This is a flying toy made from wood",
+  "price": 18,
+  "groupCode": "flyer",
+  "createdAt": {
+    "$date": "2023-06-15T18:17:54.063Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-15T18:17:54.063Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b55d2ea725ade672e5b50"
+  },
+  "productName": "Flyer",
+  "color": "red",
+  "description": "This is a flying toy made from wood",
+  "price": 18,
+  "groupCode": "flyer",
+  "createdAt": {
+    "$date": "2023-06-15T18:17:54.064Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-15T18:17:54.064Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b55d2ea725ade672e5b52"
+  },
+  "productName": "Flyer",
+  "color": "silver",
+  "description": "This is a flying toy made from wood",
+  "price": 18,
+  "groupCode": "flyer",
+  "createdAt": {
+    "$date": "2023-06-15T18:17:54.065Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-15T18:17:54.065Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b55d2ea725ade672e5b54"
+  },
+  "productName": "Flyer",
+  "color": "yellow",
+  "description": "This is a flying toy made from wood",
+  "price": 18,
+  "groupCode": "flyer",
+  "createdAt": {
+    "$date": "2023-06-15T18:17:54.066Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-15T18:17:54.066Z"
+  },
+  "__v": 0
+}]
