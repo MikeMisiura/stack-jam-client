@@ -23,12 +23,12 @@ function App() {
                 <MessageProvider>
                     <CartProvider>
 
+                                <MyNavbar />
                         <div style={{
                             backgroundColor: StackJamColors.red,
                             color: StackJamColors.white
                         }}>
                             <BrowserRouter>
-                                <MyNavbar />
                                 <div style={{ padding: 70 }}>
                                     <Routes>
 
