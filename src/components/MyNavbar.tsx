@@ -19,7 +19,7 @@ export default function MyNavbar() {
         color: StackJamColors.white
       }}
       variant="dark"
-      expand="md"
+
     >
       <Container>
         <Navbar.Brand href="/">
@@ -57,5 +57,6 @@ export default function MyNavbar() {
     </Navbar>
   );
 }
+
 
 
