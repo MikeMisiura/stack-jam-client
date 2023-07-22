@@ -42,10 +42,7 @@ export default function ContactPage() {
 
         if (phoneNumber) { newMessage.phoneNumber = phoneNumber }
 
-        console.log(newMessage)
-
         createMessage(newMessage).then(() => {
-            console.log("success!")
             setMessageSent(true)
         }).catch((error: any) => {
             console.log(error);
@@ -124,7 +121,7 @@ export default function ContactPage() {
                         />
                     </Col>
                 </Form.Group>
-                <Button>Submit</Button>
+                <Button type="submit">Submit</Button>
             </Form>
         </>
     )
