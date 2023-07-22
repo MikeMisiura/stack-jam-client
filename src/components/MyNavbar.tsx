@@ -19,6 +19,7 @@ export default function MyNavbar() {
         color: StackJamColors.white
       }}
       variant="dark"
+
     >
       <Container>
         <Navbar.Brand href="/">
@@ -31,14 +32,31 @@ export default function MyNavbar() {
           />{' '}
           Stack Jam
         </Navbar.Brand>
-      </Container>
-      <Container style={{ justifyContent: "right" }}>
-        <Nav className="me-4">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/about-us">Our Story</Nav.Link>
-          <Nav.Link href="/contact-us">Contact Us</Nav.Link>
-        </Nav>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/contact-us">Contact Us</Nav.Link>
+            <Nav.Link
+              href="https://www.etsy.com/shop/StackJam"
+              target="_blank"
+            >
+              Order Now on Etsy
+            </Nav.Link>
+            {/* <Nav.Link href="/sign-in">Sign In</Nav.Link>
+            <Nav.Link href="/sign-up">Sign Up</Nav.Link> */}
+            {admin && <NavDropdown title="Admin" id="admin-dropdown">
+            <NavDropdown.Item href="/admin/add-product">Add Product</NavDropdown.Item>
+            <NavDropdown.Item href="/admin/all-products">View All Products</NavDropdown.Item>
+              {/* <NavDropdown.Divider />
+              <NavDropdown.Item href="/admin/view-messages">View Messages</NavDropdown.Item> */}
+            </NavDropdown>}
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
+
+
+

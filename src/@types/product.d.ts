@@ -5,6 +5,8 @@ export interface IProduct{
   description: string;
   price: number;
   groupCode: string
+  featured?: boolean
+  etsy?: string
   createdAt?: string
   updatedAt?: string
   __v?: number

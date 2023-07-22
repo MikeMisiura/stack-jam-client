@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { IMessage } from '../@types/message';
 import MessageContext from '../contexts/MessageContext';
-import { Alert } from 'react-bootstrap';
+import { Alert, Button, Col, Form, Row } from 'react-bootstrap';
 
 export default function ContactPage() {
 
@@ -40,7 +40,7 @@ export default function ContactPage() {
             message
         }
 
-        if (phoneNumber) {newMessage.phoneNumber = phoneNumber}
+        if (phoneNumber) { newMessage.phoneNumber = phoneNumber }
 
         console.log(newMessage)
 
@@ -58,55 +58,74 @@ export default function ContactPage() {
     return (
         <>
             {showSuccessAlert()}
-            <form onSubmit={handleSubmit}>
-                <h1>Contact Us</h1>
-                <span>Email  </span>
-                <input
-                    placeholder="Enter email"
-                    type="text"
-                    name="email"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                />
-                <br /><br />
-                <span>Phone Number  </span>
-                <input
-                    placeholder="Enter Phone Number"
-                    type="text"
-                    name="phoneNumber"
-                    value={phoneNumber}
-                    onChange={e => setPhoneNumber(e.target.value)}
-                />
-                <br /><br />
-                <span>First Name </span>
-                <input
-                    placeholder="Enter first name"
-                    type="text"
-                    name="firstName"
-                    value={firstName}
-                    onChange={e => setFirstName(e.target.value)}
-                />
-                <br /><br />
-                <span>Last Name </span>
-                <input
-                    placeholder="Enter last name"
-                    type="text"
-                    name="lastName"
-                    value={lastName}
-                    onChange={e => setLastName(e.target.value)}
-                />
-                <br /><br />
-                <span>Message  </span>
-                <input
-                    placeholder="Enter message"
-                    type="textarea"
-                    name="message"
-                    value={message}
-                    onChange={e => setMessage(e.target.value)}
-                />
-                <br /><br />
-                <button>Submit</button>
-            </form>
+            <h1>Contact Us</h1>
+            <Form onSubmit={handleSubmit}>
+                <Form.Group as={Row} className='mb-3'>
+                    <Form.Label column sm={2}>Email:</Form.Label>
+                    <Col sm={4}>
+
+                        <Form.Control
+
+                            placeholder="Enter email"
+                            type="text"
+                            name="email"
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                        />
+                    </Col>
+                </Form.Group>
+                <Form.Group as={Row} className='mb-3'>
+
+                    <Form.Label column sm={2}>Phone Number:</Form.Label>
+                    <Col sm={4}>
+                        <Form.Control
+                            placeholder="Enter Phone Number"
+                            type="text"
+                            name="phoneNumber"
+                            value={phoneNumber}
+                            onChange={e => setPhoneNumber(e.target.value)}
+                        />
+                    </Col>
+                </Form.Group>
+                <Form.Group as={Row} className='mb-3'>
+                    <Form.Label column sm={2}>First Name:</Form.Label>
+                    <Col sm={4}>
+                        <Form.Control
+                            placeholder="Enter first name"
+                            type="text"
+                            name="firstName"
+                            value={firstName}
+                            onChange={e => setFirstName(e.target.value)}
+                        />
+                    </Col>
+                </Form.Group>
+                <Form.Group as={Row} className='mb-3'>
+                    <Form.Label column sm={2}>Last Name:</Form.Label>
+                    <Col sm={4}>
+                        <Form.Control
+                            placeholder="Enter last name"
+                            type="text"
+                            name="lastName"
+                            value={lastName}
+                            onChange={e => setLastName(e.target.value)}
+                        />
+                    </Col>
+                </Form.Group>
+                <Form.Group as={Row} className='mb-3'>
+                    <Form.Label column sm={2}>Message:</Form.Label>
+                    <Col sm={10}>
+                        <Form.Control
+                            placeholder="Enter message"
+                            type="textarea"
+                            name="message"
+                            value={message}
+                            onChange={e => setMessage(e.target.value)}
+                            as="textarea" rows={3}
+                        />
+                    </Col>
+                </Form.Group>
+                <Button>Submit</Button>
+            </Form>
         </>
     )
 };

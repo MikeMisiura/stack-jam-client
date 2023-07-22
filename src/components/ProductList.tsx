@@ -13,6 +13,7 @@ const ProductList = () => {
                     <h2>Check out these amazing products!</h2>
                     <Row className='p-3'>
                         {product.map((product: IProduct) => {
+                            if (!product.featured) { return }
                             return <ProductCardTopImage key={product._id} product={product} />
                         })}
                     </Row>
