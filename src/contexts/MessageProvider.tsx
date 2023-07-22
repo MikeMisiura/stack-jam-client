@@ -5,7 +5,7 @@ import MessageContext from "./MessageContext";
 
 export function MessageProvider({ children }: any) {
 
-    const baseUrl = "http://localhost:3000/api/message/";
+    const baseUrl = process.env.REACT_APP_SERVER_URL + "/api/message/";
 
     function createMessage(message: IMessage) {
         return axios.post(baseUrl, message)

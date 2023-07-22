@@ -1,12 +1,12 @@
 import axios from "axios";
 import UserContext from "./UserContext";
 import { IUser } from "../@types/user";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 
 export function UserProvider({ children }: any) {
 
-    const baseUrl = "http://localhost:3000/api/users/";
+    const baseUrl = process.env.REACT_APP_SERVER_URL + "/api/users/";
 
     const [admin, setAdmin] = useState(localStorage.getItem('admin'));
     const [loggedInUser, setLoggedInUser] = useState<IUser | null>(null);

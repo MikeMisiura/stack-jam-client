@@ -1,14 +1,10 @@
 import { Container, Row } from 'react-bootstrap';
-import { useContext } from 'react';
-import MessageContext from '../contexts/MessageContext';
 import ProductContext from '../contexts/ProductContext';
 import ProductCardTopImage from '../components/ProductCardTopImage';
 import { IProduct } from '../@types/product';
 
 
 export default function AllProducts() {
-
-    let { createMessage } = useContext(MessageContext);
 
     return (
         <div>

@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import ProductContext from '../contexts/ProductContext';
 import UserContext from '../contexts/UserContext';
-import { INewProduct, IProduct } from '../@types/product';
+import { INewProduct } from '../@types/product';
 
 export default function NewProduct() {
     // hooks

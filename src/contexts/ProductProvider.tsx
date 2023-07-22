@@ -8,7 +8,7 @@ export const ProductProvider = (props: { children: string | number | boolean | R
 
     const [product, setProduct] = useState([]);
 
-    const baseUrl = "http://localhost:3000/api/products/";
+    const baseUrl = process.env.REACT_APP_SERVER_URL + "/api/products/";
 
     useEffect(() => {
         async function fetchData() {
