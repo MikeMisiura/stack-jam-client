@@ -1,5 +1,4 @@
 import axios from "axios";
-import UserContext from "./UserContext";
 import { IMessage } from "../@types/message";
 import MessageContext from "./MessageContext";
 

@@ -7,6 +7,7 @@ import { INewProduct, IProduct } from "../@types/product";
 export const ProductProvider = (props: { children: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => {
 
     const [product, setProduct] = useState([]);
+
     const baseUrl = "http://localhost:3000/api/products/";
 
     useEffect(() => {
@@ -52,11 +53,23 @@ export const ProductProvider = (props: { children: string | number | boolean | R
         }
     }
 
+    function toggleFeatured(product: any) {
+        let myHeaders = {
+            Authorization: `Bearer ${localStorage.getItem('myAuthToken')}`
+        };
+
+        return axios.put(baseUrl + "feature/" + product._id, product, { headers: myHeaders })
+            .then(response => {
+                getAllProduct();
+                return new Promise(resolve => resolve(response.data));
+            });
+    }
+
     function editProduct(product: any) {
 
     }
 
-    function deleteProduct(id: any) {
+        function deleteProduct(id: any) {
 
     }
 
@@ -65,6 +78,7 @@ export const ProductProvider = (props: { children: string | number | boolean | R
             product,
             getProduct,
             addProducts,
+            toggleFeatured,
             editProduct,
             deleteProduct
         }}>

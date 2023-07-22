@@ -7,13 +7,9 @@ import { ProductProvider } from './contexts/ProductProvider';
 import { UserProvider } from './contexts/UserProvider';
 import { MessageProvider } from './contexts/MessageProvider';
 import MyNavbar from './components/MyNavbar'
-// import AdminNavbar from './components/AdminNavbar'
 import StackJamColors from './theme/stackJamColors'
-import AboutUs from './pages/About'
 import ContactPage from './pages/ContactPage'
-import { CartProvider } from './contexts/CartProvider'
-import ShoppingCart from './pages/ShoppingCart'
-// import styles from './styling/app.modules.css'; 
+import AllProducts from './pages/AllProducts'
 
 
 function App() {
@@ -21,7 +17,6 @@ function App() {
         <UserProvider>
             <ProductProvider>
                 <MessageProvider>
-                    <CartProvider>
 
                         <div style={{
                             backgroundColor: StackJamColors.red,
@@ -41,19 +36,17 @@ function App() {
                                 </Route> */}
 
                                         {/* <Route path='/' */}
-                                        <Route path="/about-us" element={<AboutUs />} />
-                                        <Route path="/cart" element={<ShoppingCart />} />
                                         <Route path="/contact-us" element={<ContactPage />} />
                                         <Route path="/sign-in" element={<SignIn />} />
                                         <Route path="/sign-up" element={<SignUp />} />
                                         <Route path="/product" element={<Home />} />
+                                        <Route path="/admin/all-products" element={<AllProducts />} />
                                         <Route path="/admin/add-product" element={<NewProduct />} />
                                         <Route path="/" element={<Navigate to="/product" />} />
                                     </Routes>
                                 </div>
                             </BrowserRouter>
                         </div>
-                    </CartProvider>
                 </MessageProvider>
             </ProductProvider>
         </UserProvider>
