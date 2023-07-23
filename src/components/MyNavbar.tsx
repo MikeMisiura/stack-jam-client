@@ -30,7 +30,7 @@ export default function MyNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Nav className="me-5">
         {/* <Nav.Link href="/home">Home</Nav.Link> */}
-        <Nav.Link href="https://www.etsy.com/shop/StackJam">Order now on Etsy!</Nav.Link>
+        <Nav.Link href="https://www.etsy.com/shop/StackJam" target="_blank">Order now on Etsy!</Nav.Link>
           
           {/* <Nav.Link href="/about-us">Our Story</Nav.Link> */}
           {/* <Nav.Link href="/contact-us">Contact Us</Nav.Link> */}
