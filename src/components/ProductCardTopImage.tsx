@@ -1,4 +1,4 @@
-import { Col, Card, Button } from 'react-bootstrap';
+import { Col, Card } from 'react-bootstrap';
 import { IProduct } from '../@types/product';
 import StackJamColors from '../theme/stackJamColors';
 
@@ -11,10 +11,10 @@ const ProductCardTopImage: React.FC<ProductProps> = ({ product }): JSX.Element =
     return (
         <Col
             key={product._id}
-            xs={12}
-            sm={6}
-            md={4}
-            xl={3}
+            // xs={12}
+            // sm={6}
+            // md={4}
+            // xl={3}
         >
             <Card
                 style={{
@@ -26,7 +26,7 @@ const ProductCardTopImage: React.FC<ProductProps> = ({ product }): JSX.Element =
                 <Card.Body>
                     <Card.Title>{product.productName} | ${product.price}</Card.Title>
                     <Card.Text>{product.description}</Card.Text>
-                    <Card.Text>Color: {product.color}</Card.Text>
+                    {/* <Card.Text>Color: {product.color}</Card.Text> */}
                 </Card.Body>
             </Card>
         </Col>

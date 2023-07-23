@@ -2,121 +2,21 @@ import { IProduct } from "../@types/product"
 
 const products: IProduct[] = [{
     "id": 0,
-    "_id": "648b55d2ea725ade672e5b38",
-    "productName": "Flyer",
-    "color": "blue",
-    "description": "This is a flying toy made from wood",
-    "price": 18,
-    "groupCode": "flyer",
+    "_id": "64bb6ee64ab768ec2811743a",
+    "productName": "Don't Lose Your Head!",
+    "color": "all",
+    "description": "Hand made and hand painted.  The \"newest\" classic game on the market! Don't Lose Your Head! and other games played with these hand made Flyers.",
+    "price": 34,
+    "groupCode": "DLYH",
     "__v": 0
   },
   {
     "id": 1,
-    "_id": "648b55d2ea725ade672e5b3a",
-    "productName": "Flyer",
-    "color": "fluorescent pink",
-    "description": "This is a flying toy made from wood",
-    "price": 18,
-    "groupCode": "flyer",
-    "__v": 0
-  },
-  {
-    "id": 2,
-    "_id": "648b55d2ea725ade672e5b3c",
-    "productName": "Flyer",
-    "color": "fluorescent orange",
-    "description": "This is a flying toy made from wood",
-    "price": 18,
-    "groupCode": "flyer",
-    "__v": 0
-  },
-  {
-    "id": 3,
-    "_id": "648b55d2ea725ade672e5b3e",
-    "productName": "Flyer",
-    "color": "green",
-    "description": "This is a flying toy made from wood",
-    "price": 18,
-    "groupCode": "flyer",
-    "__v": 0
-  },
-  {
-    "id": 4,
-    "_id": "648b55d2ea725ade672e5b40",
-    "productName": "Flyer",
-    "color": "dark natural",
-    "description": "This is a flying toy made from wood",
-    "price": 18,
-    "groupCode": "flyer",
-    "__v": 0
-  },
-  {
-    "id": 5,
-    "_id": "648b55d2ea725ade672e5b42",
-    "productName": "Flyer",
-    "color": "light natural",
-    "description": "This is a flying toy made from wood",
-    "price": 18,
-    "groupCode": "flyer",
-    "__v": 0
-  },
-  {
-    "id": 6,
-    "_id": "648b55d2ea725ade672e5b4a",
-    "productName": "Flyer",
-    "color": "orange",
-    "description": "This is a flying toy made from wood",
-    "price": 18,
-    "groupCode": "flyer",
-    "__v": 0
-  },
-  {
-    "id": 7,
-    "_id": "648b55d2ea725ade672e5b4c",
-    "productName": "Flyer",
-    "color": "fluorescent green",
-    "description": "This is a flying toy made from wood",
-    "price": 18,
-    "groupCode": "flyer",
-    "__v": 0
-  },
-  {
-    "id": 8,
-    "_id": "648b55d2ea725ade672e5b4e",
-    "productName": "Flyer",
-    "color": "purple",
-    "description": "This is a flying toy made from wood",
-    "price": 18,
-    "groupCode": "flyer",
-    "__v": 0
-  },
-  {
-    "id": 9,
-    "_id": "648b55d2ea725ade672e5b50",
-    "productName": "Flyer",
-    "color": "red",
-    "description": "This is a flying toy made from wood",
-    "price": 18,
-    "groupCode": "flyer",
-    "__v": 0
-  },
-  {
-    "id": 10,
-    "_id": "648b55d2ea725ade672e5b52",
-    "productName": "Flyer",
-    "color": "silver",
-    "description": "This is a flying toy made from wood",
-    "price": 18,
-    "groupCode": "flyer",
-    "__v": 0
-  },
-  {
-    "id": 11,
-    "_id": "648b55d2ea725ade672e5b54",
-    "productName": "Flyer",
-    "color": "yellow",
-    "description": "This is a flying toy made from wood",
-    "price": 18,
+    "_id": "64bb807b1ce0df22a4554a91",
+    "productName": "Add Flyer",
+    "color": "all",
+    "description": "Hand made and hand painted - colors will vary from photos slightly.  These are individual Flyers that you can order to add to your \"Don't Lose Your Head!\" Game",
+    "price": 15,
     "groupCode": "flyer",
     "__v": 0
   }]

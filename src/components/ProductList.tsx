@@ -7,9 +7,9 @@ import products from '../content/Products';
 const ProductList = () => {
 
     return (
-        <Container className='m-5'>
+        <Container className='mt-5'>
             <h2>Check out these amazing products!</h2>
-            <Row className='p-3'>
+            <Row className='pt-3'>
                 {products.map((product: IProduct) => {
                     return <ProductCardTopImage key={product._id} product={product} />
                 })}
