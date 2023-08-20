@@ -1,6 +1,7 @@
 import { Col, Card } from 'react-bootstrap';
 import { IProduct } from '../@types/product';
 import StackJamColors from '../theme/stackJamColors';
+import "../theme/Global.css"
 
 interface ProductProps { product: IProduct }
 
@@ -15,10 +16,11 @@ const ProductCardTopImage: React.FC<ProductProps> = ({ product }): JSX.Element =
             // sm={6}
             // md={4}
             // xl={3}
+            className='comic'
         >
             <Card
                 style={{
-                    backgroundColor: StackJamColors.red,
+                    backgroundColor: StackJamColors.maroon,
                     color: StackJamColors.white
                 }}
             >

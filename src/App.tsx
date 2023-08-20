@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import MyNavbar from './components/MyNavbar'
 import StackJamColors from './theme/stackJamColors'
 import { Col, Container } from 'react-bootstrap'
+import AboutUs from './pages/About'
 
 
 function App() {
@@ -14,13 +15,13 @@ function App() {
                 <Col>
 
                     <div style={{
-                        backgroundColor: StackJamColors.red,
+                        backgroundColor: StackJamColors.maroon,
                         color: StackJamColors.white
                     }}>
                         <BrowserRouter>
                             {/* <div style={{ padding: 70 }}> */}
                                 <Routes>
-                                    {/* <Route path="/about-us" element={<AboutUs />} /> */}
+                                    <Route path="/about-us" element={<AboutUs />} />
                                     {/* <Route path="/contact-us" element={<ContactPage />} /> */}
                                     <Route path="/home" element={<Home />} />
                                     <Route path="/" element={<Navigate to="/home" />} />
