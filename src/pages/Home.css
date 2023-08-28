@@ -1,4 +1,9 @@
 h1 {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Gruppo", "Comic Sans MS", "Comic Sans", cursive;
+    /* font-family: ; */
     color: inherit;
+    letter-spacing: 8px;
+    font-size: 50px;
   }
+
+

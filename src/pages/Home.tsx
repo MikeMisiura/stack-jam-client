@@ -1,13 +1,14 @@
 import ProductList from '../components/ProductList';
 import { Container } from 'react-bootstrap';
 import "../theme/Global.css"
+import "./Home.css"
 
 export default function Home() {
 
     return (
         <>
-            <Container>
-                <h1 className='comic'>Welcome to the Stack Jam Website!</h1>
+            <Container className='center p-5'>
+                <h1 >The Newest Classic</h1>
             </Container>
             <Container className='mx-auto center p-3'>
                 <iframe
