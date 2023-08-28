@@ -2,6 +2,7 @@ import ProductList from '../components/ProductList';
 import { Container } from 'react-bootstrap';
 import "../theme/Global.css"
 import "./Home.css"
+import MyCarousel from '../components/MyCarousel';
 
 export default function Home() {
 
@@ -9,6 +10,9 @@ export default function Home() {
         <>
             <Container className='center p-5'>
                 <h1 >The Newest Classic</h1>
+            </Container>
+            <Container className='center p-5'>
+                <MyCarousel />
             </Container>
             <Container className='mx-auto center p-3'>
                 <iframe
