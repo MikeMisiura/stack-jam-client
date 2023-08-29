@@ -31,9 +31,9 @@ export default function MyNavbar() {
         </Container>
       </Navbar.Brand>
 
-      {/* <div className='d-none d-sm-block d-md-none'>
+      <div className='d-none d-sm-block d-md-none'>
         <BuyNowButton />
-      </div> */}
+      </div>
 
       {/* <Container style={{ justifyContent: "right" }}> */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
