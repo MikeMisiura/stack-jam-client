@@ -14,8 +14,9 @@ export default function MyNavbar() {
         backgroundColor: StackJamColors.red,
         color: StackJamColors.white
       }}
-      className='comic'
+      className='comic px-3'
       variant="dark"
+      expand="md"
     >
       <Navbar.Brand href="/home">
         <Container>
@@ -29,17 +30,23 @@ export default function MyNavbar() {
           <span className='h1 ms-2'>Stack Jam</span>
         </Container>
       </Navbar.Brand>
-      <Container style={{ justifyContent: "right" }}>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+      {/* <div className='d-none d-sm-block d-md-none'>
+        <BuyNowButton />
+      </div> */}
+
+      {/* <Container style={{ justifyContent: "right" }}> */}
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse className="justify-content-end p-3">
         <Nav className="me-5">
           <Nav.Link href="/home">Home</Nav.Link>
-
           <Nav.Link href="/about-us">Our Story</Nav.Link>
           <BuyNowButton />
           {/* <Nav.Link href="https://www.etsy.com/shop/StackJam" target="_blank">Order now on Etsy!</Nav.Link> */}
           {/* <Nav.Link href="/contact-us">Contact Us</Nav.Link> */}
         </Nav>
-      </Container>
+      </Navbar.Collapse>
+      {/* </Container> */}
     </Navbar>
   );
 }

@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <>
             <Container className='center p-5'>
-                <h1 >The Newest Classic</h1>
+                <h1 style={{ textAlign: 'center' }}>The Newest Classic</h1>
             </Container>
             <Container className='center p-5'>
                 <MyCarousel />
