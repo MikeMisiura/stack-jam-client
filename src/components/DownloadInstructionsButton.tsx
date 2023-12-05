@@ -15,7 +15,9 @@ export default function DownloadInstructionsButton() {
                 shadow 
             "
 		>
-			Download Rules for 8 fun games - and make up your own rules, too!
+			<strong>Download Rules</strong> for 8 fun games
+			<br />
+			and make up your own rules, too!
 		</Button>
 	)
 }
