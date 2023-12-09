@@ -27,7 +27,7 @@
     "invalidate": "aws cloudfront create-invalidation --distribution-id E2INNSVXJUZRXI --paths /*",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "post": "react-scripts build && aws s3 sync ./build s3://stackjam-https/ && aws cloudfront create-invalidation --distribution-id E2INNSVXJUZRXI --paths /*"
+    "publish": "react-scripts build && aws s3 sync ./build s3://stackjam-https/ && aws cloudfront create-invalidation --distribution-id E2INNSVXJUZRXI --paths /*"
   },
   "eslintConfig": {
     "extends": [
